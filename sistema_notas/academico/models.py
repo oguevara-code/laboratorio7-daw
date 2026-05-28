@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Alumnos(models.Model):
+class Alumno(models.Model):
     codigo = models.CharField(max_length=10, unique=True)
     nombre = models.CharField(max_length=100)
     correo = models.EmailField()
@@ -21,7 +21,7 @@ class Curso(models.Model):
     
 
 class NotaAlumnoPorCurso(models.Model):
-    alumno = models.ForeignKey(Alumnos, on_delete=models.CASCADE)
+    alumno = models.ForeignKey(Alumno, on_delete=models.CASCADE)
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE)
     nota = models.DecimalField(max_digits=4, decimal_places=2)
 
