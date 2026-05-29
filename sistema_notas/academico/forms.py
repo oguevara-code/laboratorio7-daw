@@ -10,7 +10,8 @@ class AlumnoForm(forms.ModelForm):
 
 class CursoForm(forms.ModelForm):
     class Meta:
-        model = Cursofuelds = ['codigo', 'curso', 'nota']
+        model = Curso
+        fields = ['codigo', 'nombre', 'creditos']
 
 
 class NotaAlumnoPorCursoForm(forms.ModelForm):

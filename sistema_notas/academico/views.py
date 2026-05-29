@@ -16,7 +16,7 @@ def crear_alumno(request):
     else:
         form = AlumnoForm()
 
-    return render(request, 'academico/crear_alumno.html', {'form: form'})
+    return render(request, 'academico/crear_alumno.html', {'form': form})
 
 
 def lista_alumnos(request):
@@ -67,8 +67,8 @@ def crear_nota(request):
     return render(request, 'academico/crear_nota.html', {'form': form})
 
 
-def lista_nitas(request):
-    notas = NotaAlumnoPorCurso.objetcs.all()
+def lista_notas(request):
+    notas = NotaAlumnoPorCurso.objects.all()
 
     return render(request, 'academico/lista_notas.html', {
         'notas': notas
